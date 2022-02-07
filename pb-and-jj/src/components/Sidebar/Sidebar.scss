@@ -1,0 +1,76 @@
+@use "../../styles/shared.scss";
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: shared.$gradient-bottom;
+    box-shadow: 2px 0px 5px #888888;
+
+
+    h1 {
+        color: white;
+        padding-left: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 1rem;
+
+        .navLink {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: shared.$celeste;
+            margin-bottom: 1rem;
+
+            transition: all 200ms ease;
+
+            &:hover {
+                transform: translateX(5%);
+                color: darken($color: shared.$celeste, $amount: 25%);
+            }
+        }
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        color: white;
+        height: fit-content;
+        width: fit-content;
+        padding: .25rem;
+        border-radius: .6rem;
+        border: .2rem solid white;
+        margin-right: 2rem;
+        cursor: pointer;
+
+        span {
+            pointer-events: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .sidebar {
+        height: 4rem;
+        width: 100vw;
+        right: 0;
+        max-width: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: flex;
+        }
+    }
+}
