@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.scss';
 
-function Sidebar() {
+function Sidebar(props) {
+
+    const [open, setOpen] = useState(false);
+
     return (
         <section className='sidebar'>
-            <div className='mobile-menu-btn mobile-btn'>
-                <span className='material-icons'>menu</span>
-            </div>
-            <nav>
+            <nav className={open ? 'mobile-open' : ''}>
                 <Link className='logo navLink' to='/'>PB&JJ</Link>
                 <ul>
                     <li>
@@ -20,13 +20,16 @@ function Sidebar() {
                     <li>
                         <Link className='navLink' to='/contact'>Contact Us</Link>
                     </li>
-                    <li>
-                        <div className='mobile-close-btn mobile-btn'>
-                            <span className='material-icons'>close</span>
-                        </div>
-                    </li>
                 </ul>
+                <div className='mobile-close-btn mobile-btn'>
+                    <span className='material-icons'>close</span>
+                </div>
+                <div className='mobile-menu-btn mobile-btn' onClick={() => setOpen(!open)}>
+                    <span className='material-icons'>menu</span>
+                </div>
+
             </nav>
+
         </section>
     );
 };
