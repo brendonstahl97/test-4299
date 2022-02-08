@@ -1,75 +1,91 @@
 @use "../../styles/shared.scss";
 
 .landing-page {
-    height: 100vh;
-    background-color: shared.$background-purple;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    position: relative;
 
-    .text {
-        max-width: 40%;
-        width: fit-content;
-        h1 {
-            font-size: 5rem;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            @include shared.jojo-text();
+    .pane1 {
+        min-height: 100vh;
+        background-color: shared.$background-purple;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        position: relative;
+        overflow-y: hidden;
+        overflow-x: hidden;
+
+        .text {
+            max-width: 40%;
+            width: fit-content;
+            h1 {
+                font-size: 5rem;
+                font-weight: 500;
+                margin-bottom: 2rem;
+                @include shared.jojo-text();
+            }
+
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 300;
+                margin-bottom: 2rem;
+                @include shared.jojo-text();
+            }
+            z-index: 1;
         }
 
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            @include shared.jojo-text();
+        .human1 {
+            position: absolute;
+            right: -15rem;
+            bottom: -12rem;
+            filter: grayscale(1) opacity(0.5);
+            z-index: 0;
         }
-        z-index: 1;
+
+        .menacing1 {
+            position: absolute;
+            bottom: 30rem;
+            right: 5rem;
+            height: 64px;
+            width: 64px;
+            animation: 500ms linear 1s infinite reverse both running menacing;
+            z-index: 0;
+
+            @include shared.menacing-anim();
+        }
+
+        .menacing2 {
+            position: absolute;
+            bottom: 25rem;
+            right: 17rem;
+            height: 64px;
+            width: 64px;
+            animation: 500ms linear 1s infinite reverse both running menacing;
+            z-index: 0;
+
+            @include shared.menacing-anim();
+        }
+
+        .menacing3 {
+            position: absolute;
+            bottom: 15rem;
+            right: 1rem;
+            height: 64px;
+            width: 64px;
+            z-index: 0;
+
+            @include shared.menacing-anim();
+        }
     }
+}
 
-    .human1 {
-        position: absolute;
-        right: -15rem;
-        bottom: -12rem;
-        filter: grayscale(1) opacity(0.5);
-        z-index: 0;
-    }
-
-    .menacing1 {
-        position: absolute;
-        bottom: 30rem;
-        right: 5rem;
-        height: 64px;
-        width: 64px;
-        animation: 500ms linear 1s infinite reverse both running menacing;
-        z-index: 0;
-        
-        @include shared.menacing-anim();
-    }
-
-    .menacing2 {
-        position: absolute;
-        bottom: 25rem;
-        right: 17rem;
-        height: 64px;
-        width: 64px;
-        animation: 500ms linear 1s infinite reverse both running menacing;
-        z-index: 0;
-        
-        @include shared.menacing-anim();
-    }
-
-    .menacing3 {
-        position: absolute;
-        bottom: 15rem;
-        right: 1rem;
-        height: 64px;
-        width: 64px;
-        z-index: 0;
-
-        @include shared.menacing-anim();
+@media only screen and (max-width: 1024px) {
+    .landing-page {
+        .pane1 {
+            .text {
+                max-width: 90%;
+            }
+        }
     }
 }
