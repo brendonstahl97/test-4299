@@ -1,3 +1,5 @@
+// Variables
+
 /* SCSS HEX */
 $french-violet: #6f2dbdff;
 $amethyst: #a663ccff;
@@ -18,6 +20,7 @@ $gradient-top-left: linear-gradient(225deg, #6f2dbdff, #a663ccff, #b298dcff, #b8
 $gradient-bottom-left: linear-gradient(315deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
 $gradient-radial: radial-gradient(#6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
 
+
 // Mixins
 
 @mixin jojo-text() {
@@ -30,8 +33,26 @@ $gradient-radial: radial-gradient(#6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b
     animation: 500ms linear 1s infinite reverse both running menacing;
 }
 
+// Classes
+.appear-up {
+    animation: appear-up;
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+}
 
 // Animations
+
+@keyframes appear-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @keyframes menacing {
     20% {

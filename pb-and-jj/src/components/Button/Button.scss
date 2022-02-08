@@ -43,7 +43,6 @@
 
         &:hover ~ img {
             opacity: 1;
-            animation-play-state: running;
         }
     }
 
@@ -55,7 +54,6 @@
         opacity: 0;
         transition: all 300ms linear;
         @include shared.menacing-anim();
-        animation-play-state: paused;
         pointer-events: none;
     }
 
