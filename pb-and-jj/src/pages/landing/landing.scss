@@ -1,3 +1,75 @@
 @use "../../styles/shared.scss";
 
+.landing-page {
+    height: 100vh;
+    background-color: #1b102e;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
 
+    .text {
+        max-width: 40%;
+        width: fit-content;
+        h1 {
+            font-size: 5rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            @include shared.jojo-text();
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            @include shared.jojo-text();
+        }
+        z-index: 1;
+    }
+
+    .human1 {
+        position: absolute;
+        right: -15rem;
+        bottom: -12rem;
+        filter: grayscale(1) opacity(0.5);
+        z-index: 0;
+    }
+
+    .menacing1 {
+        position: absolute;
+        bottom: 30rem;
+        right: 5rem;
+        height: 64px;
+        width: 64px;
+        animation: 500ms linear 1s infinite reverse both running menacing;
+        z-index: 0;
+        
+        @include shared.menacing-anim();
+    }
+
+    .menacing2 {
+        position: absolute;
+        bottom: 25rem;
+        right: 17rem;
+        height: 64px;
+        width: 64px;
+        animation: 500ms linear 1s infinite reverse both running menacing;
+        z-index: 0;
+        
+        @include shared.menacing-anim();
+    }
+
+    .menacing3 {
+        position: absolute;
+        bottom: 15rem;
+        right: 1rem;
+        height: 64px;
+        width: 64px;
+        z-index: 0;
+
+        @include shared.menacing-anim();
+    }
+}

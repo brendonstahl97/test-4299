@@ -1,76 +1,96 @@
 @use "../../styles/shared.scss";
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    width: 17rem;
-    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    background-image: shared.$gradient-bottom;
-    box-shadow: 2px 0px 5px #888888;
-
-
-    h1 {
-        color: white;
-        padding-left: 1rem;
-    }
-
-    ul {
-        list-style: none;
-        padding-left: 1rem;
-
-        .navLink {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: shared.$celeste;
-            margin-bottom: 1rem;
-
-            transition: all 200ms ease;
-
-            &:hover {
-                transform: translateX(5%);
-                color: darken($color: shared.$celeste, $amount: 25%);
-            }
-        }
-    }
+    z-index: 2;
 
     .mobile-menu-btn {
         display: none;
+    }
+
+    .mobile-btn {
         color: white;
         height: fit-content;
         width: fit-content;
-        padding: .25rem;
-        border-radius: .6rem;
-        border: .2rem solid white;
-        margin-right: 2rem;
+        place-items: center;
+        padding: 0.25rem;
+        margin-right: 1rem;
         cursor: pointer;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        opacity: 0.6;
+
+        transition: all 300ms ease;
+
+        &:hover {
+            opacity: 1;
+            color: shared.$jojo-pink;
+        }
 
         span {
             pointer-events: none;
         }
     }
-}
 
-@media only screen and (max-width: 1024px) {
-    .sidebar {
-        height: 4rem;
-        width: 100vw;
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
         right: 0;
-        max-width: none;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        height: 4rem;
+        background-color: rgba(0, 0, 0, 0.459);
 
-        ul {
-            display: none;
+        .navLink {
+            text-decoration: none;
+            color: white;
+            opacity: 0.6;
+            font-size: 2rem;
+
+            transition: all 300ms ease;
+
+            &:hover {
+                opacity: 1;
+                color: shared.$jojo-pink;
+            }
         }
 
-        .mobile-menu-btn {
+        .logo {
+            position: absolute;
+            top: .8rem;
+            left: 1rem;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            list-style: none;
             display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            li {
+                &:not(:last-of-type) {
+                    margin-right: 2rem;
+                }
+
+                &:first-of-type {
+                    flex-grow: 1;
+                    text-align: right;
+                }
+
+                &:nth-of-type(3) {
+                    flex-grow: 1;
+                }
+
+                .mobile-close-btn {
+                    display: none;
+                }
+            }
         }
     }
 }

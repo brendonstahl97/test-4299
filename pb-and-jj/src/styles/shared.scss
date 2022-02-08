@@ -4,7 +4,7 @@ $amethyst: #a663ccff;
 $wisteria: #b298dcff;
 $beau-blue: #b8d0ebff;
 $celeste: #b9faf8ff;
-
+$jojo-pink: rgb(205, 4, 255);
 
 /* SCSS Gradient */
 $gradient-top: linear-gradient(0deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
@@ -16,3 +16,42 @@ $gradient-bottom-right: linear-gradient(135deg, #6f2dbdff, #a663ccff, #b298dcff,
 $gradient-top-left: linear-gradient(225deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
 $gradient-bottom-left: linear-gradient(315deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
 $gradient-radial: radial-gradient(#6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
+
+// Mixins
+
+@mixin jojo-text() {
+    background-image: linear-gradient($jojo-pink, rgb(255, 255, 255));
+    background-clip: text;
+    color: transparent;
+}
+
+@mixin menacing-anim() {
+    animation: 500ms linear 1s infinite reverse both running menacing;
+}
+
+
+// Animations
+
+@keyframes menacing {
+    20% {
+        transform: translate(1px, -1px);
+    }
+
+    40% {
+        transform: translate(-1px, 1px);
+    }
+
+    60% {
+        transform: translate(1px, 1px);
+    }
+
+    80% {
+        transform: translate(-1px, -1px);
+    }
+
+    100% {
+        transform: translate(1px, -1px);
+    }
+}
+
+
