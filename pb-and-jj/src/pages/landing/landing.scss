@@ -78,13 +78,59 @@
             @include shared.menacing-anim();
         }
     }
+
+    .pane2 {
+        min-height: 100vh;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        .text {
+            flex-grow: 1;
+            max-width: 90%;
+            margin-left: 3rem;
+
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 500;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        .ep-and-social {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            margin-top: 3rem;
+
+            .episode {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    text-align: center;
+                }
+            }
+            .social {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1024px) {
     .landing-page {
         .pane1 {
             .text {
-                max-width: 90%;
+                max-width: 80%;
             }
         }
     }

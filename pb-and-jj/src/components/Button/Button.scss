@@ -4,20 +4,25 @@
     position: relative;
     width: fit-content;
     border-radius: 0.6rem;
-    border: 0.2rem solid shared.$jojo-pink;
+    border: 0.2rem solid transparent;
 
     &:before {
         content: "";
         position: absolute;
         inset: -.2rem;
         overflow: hidden;
-        background-color: shared.$background-purple;
+        background-color: transparent;
 
-        transition: all 300ms ease;
+        transition: transform 300ms ease;
+    }
+
+    &:hover {
+        border-color: shared.$jojo-pink;
     }
 
     &:hover::before {
         transform: scaleX(0);
+        background-color: shared.$background-purple;
     }
 
     button {
@@ -37,7 +42,6 @@
         transition: all 300ms ease;
     
         &:hover {
-            // background-color: rgba(255, 255, 255, 0.144);
             color: lighten($color: shared.$jojo-pink, $amount: 25%) ;
         }
 
@@ -53,8 +57,9 @@
         width: 32px;
         opacity: 0;
         transition: all 300ms linear;
-        @include shared.menacing-anim();
         pointer-events: none;
+
+        @include shared.menacing-anim();
     }
 
     .button-menacing1 {
