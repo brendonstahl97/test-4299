@@ -13,7 +13,7 @@ function Landing() {
             <img className="menacing3" src='./img/menacing.png' alt="menacing kanji"></img>
             <div className="text">
                 <h1>Parker, Brendon, and JoJo</h1>
-                <h2>The JoJo's Bizarre Adventure Watch/Re-watch Podcast</h2>
+                <h2><b>The</b> JoJo's Bizarre Adventure Watch/Re-watch Podcast</h2>
                 <Button label='Learn More'></Button>
             </div>
 
