@@ -17,10 +17,12 @@ function Landing() {
                 <div className="text">
                     <h1 className='appear-up-0' >Parker, Brendon, and JoJo</h1>
                     <h2 className='appear-up-1' ><b>The</b> JoJo's Bizarre Adventure Watch/Re&#8209;Watch Podcast</h2>
-                    <Button label='Learn More'></Button>
+                    <a href='#pane2'>
+                        <Button label='Learn More'></Button>
+                    </a>
                 </div>
             </div>
-            <div className="pane2">
+            <div className="pane2" id='pane2'>
                 <div className="text">
                     <div className="rift">
                         <img className="vortex-circle" src='./img/vortex-circle.svg'></img>
