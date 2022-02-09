@@ -32,6 +32,9 @@
                 margin-bottom: 2rem;
                 @include shared.jojo-text();
             }
+            a {
+                text-decoration: none;
+            }
             z-index: 1;
         }
 
@@ -176,6 +179,7 @@
             }
         }
         .text {
+            margin-top: 4rem;
             max-width: 90%;
             text-align: center;
             color: white;
@@ -209,11 +213,10 @@
     .pane3 {
         display: flex;
         justify-content: space-around;
-        flex-wrap: wrap;
         flex-grow: 1;
         padding-top: 3rem;
         color: white;
-        min-height: 40vh;
+        min-height: 50vh;
         width: 100%;
         background-color: shared.$background-purple;
 
@@ -227,7 +230,7 @@
 
             .latest-episode {
                 display: grid;
-                place-items: center;
+                place-items: top;
                 flex-grow: 1;
             }
         }
@@ -250,7 +253,7 @@
                     width: 100%;
                     display: flex;
                     flex-direction: column;
-                    
+
                     .socialLink {
                         &:not(:last-child) {
                             margin-bottom: 1rem;
@@ -260,11 +263,11 @@
 
                 .col1 {
                     align-items: flex-end;
-                    margin-right: .5rem;
+                    margin-right: 0.5rem;
                 }
 
                 .col2 {
-                    margin-left: .5rem;
+                    margin-left: 0.5rem;
                 }
             }
         }
@@ -281,6 +284,37 @@
     }
 }
 
+@media only screen and (max-width: 1120px) {
+    .landing-page {
+        .pane3 {
+            min-height: 70vh;
+            flex-direction: column;
+            align-items: center;
+            .social {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .landing-page {
+        .pane3 {
+            .social {
+                .social-links {
+                    flex-direction: column;
+                    .col1, .col2 {
+                        align-items: center;
+                        margin: 0;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Landing Animations
 @keyframes spin-clockwise {
     0% {
         transform: rotateZ(0);
