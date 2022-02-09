@@ -20,31 +20,33 @@ function Landing() {
             </div>
             <div className="pane2">
                 <div className="text">
+                    <div className="rift">
+                        <img className="vortex-circle" src='./img/vortex-circle.svg'></img>
+                        <img className="vortex-star" src='./img/Vortex-Star.svg'></img>
+                        <img className="spiral-fire" src='./img/spiral-fire.svg'></img>
+                        <img className="microphone" src='./img/microphone.svg'></img>
+                        <img className="crow" src='./img/crow.svg'></img>
+                    </div>
                     <h2>The perfect reason to watch through JoJo's Bizarre Adventure for the first time or the thirtieth</h2>
-                    <p>Parker hase been obsessed with the series for years, reading the manga and watching through the anime several times.</p>
-                    <p>Brendon has remained unexposed to the series by living in the shadows since the anime's original release in 2012.</p>
+                    <div className="people">
+                        <p>Parker hase been obsessed with the series for years, reading the manga and watching through the anime several times.</p>
+                        <p>Brendon has remained unexposed to the series by living in the shadows since the anime's original release in 2012.</p>
+                    </div>
                     <p>When they are brought together in the presence of microphones with the intent to discuss JoJo, an interdimentional rift opens and causes the pair to become an etheral diety whose soul purpose is to entertain.</p>
                 </div>
-                <div className="ep-and-social">
-                    <div className="episode">
-                        <h2>Latest Episode:</h2>
-                        <iframe src="https://anchor.fm/pbandjj/embed/episodes/Ranking-Part-1-Part-2-e1e1qnq/a-a7c3c4d" height="102px" width="400px" frameBorder="0" scrolling="no"></iframe>
-                        <div className="social"></div>
+            </div>
+            <div className="pane3">
+                <div className="episode">
+                    <h2>Listen to our Latest Episode:</h2>
+                    <div className="latest-episode">
+                        <iframe src="https://anchor.fm/pbandjj/embed/episodes/Ranking-Part-1-Part-2-e1e1qnq" height="102px" width="400px" frameBorder="0" scrolling="no"></iframe>
                     </div>
-                    <div className="social">
-                        <h2>Where to Appease the Entertainment Diety:</h2>
-                        <p>Spotify</p>
-                        <p>Apple Podcasts</p>
-                        <p>Anchor</p>
-                        <p>Twitter</p>
-                        <p>Radio Public</p>
-                        <p>Google Podcasts</p>
-                        <p>Spotify</p>
-                        <p>RSS Feed</p>
+                </div>
+                <div className="social">
+                    <h2>Where to Appease the Entertainment Diety:</h2>
+                    <div className="social-links">
+                        
                     </div>
-
-
-                    {/* <iframe src="https://anchor.fm/pbandjj/embed/episodes/Ranking-Part-1-Part-2-e1e1qnq" height="102px" width="400px" frameborder="0" scrolling="no"></iframe> */}
                 </div>
             </div>
         </div>
