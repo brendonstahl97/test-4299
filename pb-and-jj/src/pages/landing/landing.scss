@@ -3,6 +3,10 @@
 .landing-page {
     width: 100%;
 
+    .pane1, .pane3 {
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.562), 0 -8px 8px rgba(0, 0, 0, 0.562);
+    }
+
     .pane1 {
         min-height: 100vh;
         background-color: shared.$background-purple;
@@ -90,6 +94,7 @@
         flex-grow: 1;
         flex-direction: column;
         position: relative;
+        z-index: -1;
         background: linear-gradient(90deg, shared.$jojo-pink, shared.$wisteria);
         isolation: isolate;
         overflow: hidden;
