@@ -2,17 +2,21 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Landing from './pages/landing/landing';
 import Sidebar from './components/Sidebar/Sidebar';
+import Footer from './components/Footer/Footer';
 import './App.scss'
 
 function App() {
   return (
     <Router>
       <Sidebar></Sidebar>
-      <section className="content">
+      <main className="content">
         <Routes>
           <Route path='/' element={<Landing />} />
         </Routes>
-      </section>
+      </main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </Router>
   );
 }
