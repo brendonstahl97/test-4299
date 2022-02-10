@@ -11,7 +11,7 @@
     .list {
         font-size: 0;
         opacity: 0;
-        transition: all 500ms ease;
+        transition: font-size 500ms ease, opacity 500ms ease 500ms;
         .item {
             width: 100%;
             display: flex;
