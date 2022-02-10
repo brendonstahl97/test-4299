@@ -1,0 +1,27 @@
+@use "../../styles/shared.scss";
+
+.episode-rankings {
+    width: 100%;
+    min-height: 100vh;
+    background-color: shared.$background-purple;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    h1 {
+        text-align: center;
+    }
+    .description {
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .ranked-lists {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
