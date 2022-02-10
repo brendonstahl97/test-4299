@@ -3,7 +3,7 @@ import './Button.scss';
 
 function Button(props) {
     return (
-        <div className='jojoButton appear-up-2'>
+        <div className={'jojoButton ' + props.className}>
             <button>
                 {props.children}
             </button>

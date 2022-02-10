@@ -18,7 +18,7 @@ function Landing() {
                     <h1 className='appear-up-0' >Parker, Brendon, and JoJo</h1>
                     <h2 className='appear-up-1' ><b>The</b> JoJo's Bizarre Adventure Watch/Re&#8209;Watch Podcast</h2>
                     <a href='#pane2'>
-                        <Button>Learn More</Button>
+                        <Button className="appear-up-2">Learn More</Button>
                     </a>
                 </div>
             </div>
@@ -52,7 +52,7 @@ function Landing() {
                         <div className="col1">
                             <SocialLink img='https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/006/apple_podcasts.png' label='Apple Podcasts' link='https://podcasts.apple.com/us/podcast/parker-brendon-and-jojo/id1596781845'></SocialLink>
                             <SocialLink img='https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/006/google_podcasts.png' label='Google Podcasts' link='https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8xNDViZTAzYy9wb2RjYXN0L3Jzcw'></SocialLink>
-                            <SocialLink img='./img/rss.png' label='Copy RSS Feed'></SocialLink>
+                            <SocialLink img='./img/rss.png' rss='true' link='https://anchor.fm/s/145be03c/podcast/rss' label='Copy RSS Feed'></SocialLink>
                         </div>
                         <div className="col2">
                             <SocialLink img='https://d12xoj7p9moygp.cloudfront.net/images/podcast/logo-square/006/spotify.png' label='Spotify' link='https://open.spotify.com/show/1S5SYWaZfj41svKhQhXFzt'></SocialLink>

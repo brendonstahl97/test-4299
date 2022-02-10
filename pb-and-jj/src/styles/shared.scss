@@ -91,3 +91,7 @@ $gradient-radial: radial-gradient(#6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b
 .appear-up-2 {
     @include appear-up(2s);
 }
+
+.appear-up-3 {
+    @include appear-up(3s);
+}
