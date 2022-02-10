@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Landing from './pages/landing/landing';
 import EpisodeRankings from './pages/Episode-Rankings/Episode-Rankings';
+import ContactUs from './pages/Contact-Us/Contact-Us';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
 import './App.scss'
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/ranked-lists' element={<EpisodeRankings />} />
+          <Route path='/contact' element={<ContactUs />} />
         </Routes>
       </main>
       <footer>

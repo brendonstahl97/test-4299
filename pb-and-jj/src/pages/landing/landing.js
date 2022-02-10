@@ -18,7 +18,7 @@ function Landing() {
                     <h1 className='appear-up-0' >Parker, Brendon, and JoJo</h1>
                     <h2 className='appear-up-1' ><b>The</b> JoJo's Bizarre Adventure Watch/Re&#8209;Watch Podcast</h2>
                     <a href='#pane2'>
-                        <Button label='Learn More'></Button>
+                        <Button>Learn More</Button>
                     </a>
                 </div>
             </div>
