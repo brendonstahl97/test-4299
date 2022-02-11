@@ -8,7 +8,7 @@
     }
 
     .pane1 {
-        min-height: 100vh;
+        height: 100vh;
         background-color: shared.$background-purple;
         width: 100vw;
         display: flex;
@@ -27,6 +27,7 @@
                 font-size: 5rem;
                 font-weight: 500;
                 margin-bottom: 2rem;
+                margin-top: 0;
                 @include shared.jojo-text();
             }
 

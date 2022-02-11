@@ -5,7 +5,7 @@ import './landing.scss';
 import '../../components/Social-Link/Social-link';
 import SocialLink from "../../components/Social-Link/Social-link";
 
-const rssURL = 'https://anchor.fm/s/145be03c/podcast/rss';
+// const rssURL = 'https://anchor.fm/s/145be03c/podcast/rss';
 
 
 // const getRssData = async () => {
