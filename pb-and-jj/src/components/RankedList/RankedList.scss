@@ -55,3 +55,13 @@
         width: 90vw;
     }
 }
+
+@media only screen and (max-width: 650px) {
+    .ranked-list {
+        &.open {
+            .list {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
