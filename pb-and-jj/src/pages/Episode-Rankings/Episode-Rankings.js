@@ -18,9 +18,9 @@ const phantomBloodListData = [
 function EpisodeRankings(props) {
     return (
         <div className='episode-rankings'>
-            <h1>Episode Rankings</h1>
-            <p className='description'>Here you can find our ranked lists for each part of JoJo's Bizarre Adventure as discussed on the show! Click on the part you would like to view.</p>
-            <div className='ranked-lists'>
+            <h1 className='appear-up-0'>Episode Rankings</h1>
+            <p className='description appear-up-1'>Here you can find our ranked lists for each part of JoJo's Bizarre Adventure as discussed on the show! Click on the part you would like to view.</p>
+            <div className='ranked-lists appear-up-2'>
                 <RankedList title='Phantom Blood' listData={phantomBloodListData}></RankedList>
                 <RankedList title='Battle Tendency'></RankedList>
             </div>
