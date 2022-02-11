@@ -15,6 +15,7 @@
 
     .PandB {
         overflow: hidden;
+        width: 100%;
         position: relative;
         display: flex;
         justify-content: space-evenly;
@@ -22,7 +23,7 @@
 
         .Parker, .Brendon {
             padding: 3rem;
-            max-width: 30vw;
+            max-width: 30%;
             border-radius: 1rem;
             background-color: shared.$background-white;
             h2 {
@@ -55,12 +56,15 @@
             align-items: center;
             .Parker, .Brendon {
                 padding: 1rem;
-                max-width: 90%;
+                max-width: 80%;
             }
 
             .Parker {
                 margin-bottom: 2rem;
             }
+        }
+        .jj {
+            max-width: 90%;
         }
     }
 }
