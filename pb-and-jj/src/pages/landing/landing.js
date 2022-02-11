@@ -1,12 +1,26 @@
 import React from "react";
+import axios from 'axios';
 import Button from '../../components/Button/Button';
 import './landing.scss';
 import '../../components/Social-Link/Social-link';
 import SocialLink from "../../components/Social-Link/Social-link";
 
+const rssURL = 'https://anchor.fm/s/145be03c/podcast/rss';
 
 
-function Landing() {
+// const getRssData = async () => {
+//     try {
+//         const response = await axios.get(rssURL);
+//         response.data
+//     } catch (error) {
+//         console.error(error);
+//     };
+// };
+
+// getRssData();
+
+
+function Landing(props) {
     return (
         <div className="landing-page">
             <div className="pane1">

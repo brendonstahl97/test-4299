@@ -1,0 +1,18 @@
+{
+  "name": "pbandjj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'pb-and-jj/*'\" \"npm run client\"",
+    "client": "cd pb-and-jj && npm run start",
+    "build": "cd pb-and-jj && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
