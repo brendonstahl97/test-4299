@@ -11,7 +11,7 @@ function SocialLink(props) {
     };
 
     return (
-        <a target='__blank' href={props.rss ? '' : props.link} className={(open ? 'open' : '') + ' socialLink'} onMouseEnter={() => { setOpen(true) }} onMouseLeave={() => { setOpen(false) }} onClick={props.rss ? (e) => handleClick(e, props.link) : ''}>
+        <a target='__blank' href={props.rss ? '' : props.link} className={(open ? 'open' : '') + ' socialLink'} onMouseEnter={() => { setOpen(true) }} onMouseLeave={() => { setOpen(false) }} onClick={props.rss ? (e) => handleClick(e, props.link) : () => {}}>
             <div className='data'>
                 <img src={props.img} alt={props.label}></img>
                 <p>{props.label}</p>
