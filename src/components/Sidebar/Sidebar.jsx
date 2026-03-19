@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.scss';
+import viteConfig from '../../../vite.config';
 
 function Sidebar(props) {
 
@@ -14,7 +15,7 @@ function Sidebar(props) {
     return (
         <section className='sidebar'>
             <nav className={open ? 'mobile-open' : ''}>
-                <Link className='logo navLink' to='/' onClick={() => !open ? '' : setOpen(!open)}>PB&JJ</Link>
+                <Link className='logo navLink' to={viteConfig.base} onClick={() => !open ? '' : setOpen(!open)}>PB&JJ</Link>
                 <ul>
                     <li>
                         <Link className='navLink' to='/about' onClick={() => !open ? '' : setOpen(!open)}>About Us</Link>
