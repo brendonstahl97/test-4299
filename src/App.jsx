@@ -8,7 +8,7 @@ import AboutUs from "./pages/About-Us/AboutUs";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer";
 import "./App.scss";
-import viteConfig from "../vite.config";
+
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Sidebar></Sidebar>
       <main className="content">
         <Routes>
-          <Route path="/test-4299" element={<Landing />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/ranked-lists" element={<EpisodeRankings />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />
