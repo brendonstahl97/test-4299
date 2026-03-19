@@ -16,7 +16,7 @@ function ContactUs(props) {
                 <h2 className='appear-up-2'>You can also find us on Twitter:</h2>
                 <a target='__blank' href='https://twitter.com/PBAndJJPod' className='twitter-info'>
                     <Button className='appear-up-2'>
-                        <img src='./img/twitter.svg' alt='Twitter Icon'></img>
+                        <img src='./img/x_logo.svg' alt='Twitter Icon'></img>
                         @PBAndJJPod
                     </Button>
                 </a>
