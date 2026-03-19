@@ -1,0 +1,32 @@
+@use 'styles/fonts.scss';
+
+:root {
+    font-size: 16px;
+    color: white;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    line-height: normal;
+}
+
+h1,h2,h3 {
+    color: white;
+}
+
+#root {
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    
+    overflow-x: hidden;
+}
+
+.content {
+    width: 100%;
+    min-height: 100vh;
+}

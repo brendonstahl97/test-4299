@@ -1,0 +1,98 @@
+// Variables
+
+$french-violet: #6f2dbdff;
+$amethyst: #a663ccff;
+$wisteria: #b298dcff;
+$beau-blue: #b8d0ebff;
+$celeste: #b9faf8ff;
+$jojo-pink: rgb(205, 4, 255);
+$background-purple: #1b102e;
+$nav-black: rgba(0, 0, 0, 0.459);
+$background-white: rgba(255, 255, 255, 0.055);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
+$gradient-right: linear-gradient(90deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
+$gradient-bottom: linear-gradient(180deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
+$gradient-left: linear-gradient(270deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
+$gradient-top-right: linear-gradient(45deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
+$gradient-bottom-right: linear-gradient(135deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
+$gradient-top-left: linear-gradient(225deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
+$gradient-bottom-left: linear-gradient(315deg, #6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
+$gradient-radial: radial-gradient(#6f2dbdff, #a663ccff, #b298dcff, #b8d0ebff, #b9faf8ff);
+
+// Mixins
+
+@mixin jojo-text() {
+    background-image: linear-gradient($jojo-pink, rgb(255, 255, 255));
+    background-clip: text;
+    color: transparent;
+}
+
+@mixin menacing-anim() {
+    animation: 500ms linear 0s infinite reverse both running menacing;
+}
+
+@mixin appear-up($delay) {
+    opacity: 0;
+    animation: appear-up;
+    animation-duration: 1500ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: $delay;
+}
+
+
+// Animations
+
+@keyframes appear-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes menacing {
+    20% {
+        transform: translate(1px, -1px);
+    }
+
+    40% {
+        transform: translate(-1px, 1px);
+    }
+
+    60% {
+        transform: translate(1px, 1px);
+    }
+
+    80% {
+        transform: translate(-1px, -1px);
+    }
+
+    100% {
+        transform: translate(1px, -1px);
+    }
+}
+
+// Global classes
+
+.appear-up-0 {
+    @include appear-up(0s);
+}
+
+.appear-up-1 {
+    @include appear-up(.5s);
+}
+
+.appear-up-2 {
+    @include appear-up(1s);
+}
+
+.appear-up-3 {
+    @include appear-up(1.5s);
+}

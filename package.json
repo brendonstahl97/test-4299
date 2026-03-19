@@ -1,25 +1,37 @@
 {
-  "name": "pbandjj",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server/server.js",
+  "name": "pb-and-jj",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://brendonstahl97.github.io/pb-and-jj",
   "scripts": {
-    "start": "node server/server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'pb-and-jj/*'\" \"npm run client\"",
-    "client": "cd pb-and-jj && npm run start",
-    "build": "cd pb-and-jj && npm run build",
-    "deploy": "cd pb-and-jj && npm run deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "animejs": "^4.0.1",
-    "body-parser": "^1.19.1",
-    "concurrently": "^9.2.1",
-    "express": "^4.17.2"
+    "animejs": "^4.3.6",
+    "axios": "^1.13.6",
+    "motion": "^12.38.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.1",
+    "scss": "^0.2.4"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.4.0",
+    "sass-embedded": "^1.98.0",
+    "vite": "^8.0.0"
   }
 }
