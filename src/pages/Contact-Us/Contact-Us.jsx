@@ -20,13 +20,6 @@ function ContactUs(props) {
                         @PBAndJJPod
                     </Button>
                 </a>
-                <h2 className='appear-up-3'>You can even send us a voice message and we might play it on the show!</h2>
-                <p className='appear-up-3'>Don't be shitty if you can help it</p>
-                <a target='__blank' href='https://anchor.fm/pbandjj/message'>
-                    <Button className='appear-up-3'>
-                        Send a Voice Message
-                    </Button>
-                </a>
             </div>
 
         </div>
