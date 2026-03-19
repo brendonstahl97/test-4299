@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://brendonstahl97.github.io/test-4299",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
