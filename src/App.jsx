@@ -16,7 +16,7 @@ function App() {
         <Sidebar></Sidebar>
         <main className="content">
           <Routes>
-            <Route path='/' element={<Landing />} />
+            <Route path='/test-4299' element={<Landing />} />
             <Route path='/ranked-lists' element={<EpisodeRankings />} />
             <Route path='/contact' element={<ContactUs />} />
             <Route path='/about' element={<AboutUs />} />
