@@ -8,12 +8,18 @@
     "start:dev": "concurrently \"nodemon --ignore 'pb-and-jj/*'\" \"npm run client\"",
     "client": "cd pb-and-jj && npm run start",
     "build": "cd pb-and-jj && npm run build",
+    "deploy": "cd pb-and-jj && npm run deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animejs": "^4.0.1",
     "body-parser": "^1.19.1",
+    "concurrently": "^9.2.1",
     "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
