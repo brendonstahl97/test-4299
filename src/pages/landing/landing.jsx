@@ -6,9 +6,15 @@ import "./landing.scss";
 import "../../components/Social-Link/Social-link";
 import SocialLink from "../../components/Social-Link/Social-link";
 
-import { animate, createScope, engine, utils } from "animejs";
 import {
-  useMotionValue,
+  animate,
+  createScope,
+  createTimer,
+  engine,
+  utils,
+  waapi,
+} from "animejs";
+import {
   useScroll,
   useVelocity,
   useSpring,
@@ -17,7 +23,7 @@ import {
 } from "motion/react";
 
 const rssURL = "https://anchor.fm/s/145be03c/podcast/rss";
-const engineDampening = 9.8;
+const pollingRate = 30;
 
 const getRssData = async () => {
   try {
@@ -36,79 +42,48 @@ function Landing(props) {
 
   let [scrollDelta, setScrollDelta] = useState(0);
 
-  //   const handleEngineSpeed = (rawEngineSpeed) => {
-  //     var finalEngineSpeed = rawEngineSpeed
-
-  //     if (rawEngineSpeed > 1)
-  //         finalEngineSpeed = rawEngineSpeed - engineDampening;
-  //     if (finalEngineSpeed < 1)
-  //         finalEngineSpeed = 1
-
-  //     // if (engine.speed != finalEngineSpeed)
-  //     //   utils.sync(() => {
-  //     //     engine.speed = finalEngineSpeed;
-  //     //   });
-
-  //     setEngineSpeed(finalEngineSpeed)
-  //   }
-
-  //   useEffect(() => {
-  //     // console.log("engine speed: ", engineSpeed)
-  //     if (engine.speed != engineSpeed)
-  //       utils.sync(() => {
-  //         engine.speed = engineSpeed;
-  //       });
-
-  //   }, [engineSpeed]);
-
-  //   useEffect(() => {
-  //     // console.log("Scroll Delta applied to speed: ", scrollDelta)
-  //     handleEngineSpeed(engineSpeed + scrollDelta * .1);
-  //     // console.log("Engine Speed: ", engineSpeed)
-  //   }), [scrollDelta];
-
   useEffect(() => {
     // AnimeJs animations
     scope.current = createScope({ root }).add((self) => {
       // Animations go here
-      animate(".vortex-circle", {
+      waapi.animate(".vortex-circle", {
         rotateZ: ["0deg", "360deg"],
         duration: 25000,
         playbackRate: 1,
-        playbackEase: "linear",
+        ease: "linear",
         loop: true,
       });
 
-      animate(".spiral-fire", {
+      waapi.animate(".spiral-fire", {
         rotateZ: ["0deg", "360deg"],
         duration: 15000,
         playbackRate: 1,
-        playbackEase: "linear",
+        ease: "linear",
         loop: true,
       });
 
-      animate(".crow", {
+      waapi.animate(".crow", {
         rotateZ: ["0deg", "360deg"],
         duration: 30000,
         playbackRate: 1,
-        playbackEase: "linear",
+        ease: "linear",
         loop: true,
       });
 
-      animate(".microphone", {
+      waapi.animate(".microphone", {
         rotateZ: ["0deg", "360deg"],
         duration: 15000,
         playbackRate: 1,
-        playbackEase: "linear",
+        ease: "linear",
         loop: true,
       });
 
-      animate(".vortex-star", {
+      waapi.animate(".vortex-star", {
         rotateZ: ["0deg", "180deg", "360deg"],
         scale: ["1", "1.5", "1"],
         duration: 10000,
         playbackRate: 1,
-        playbackEase: "linear",
+        ease: "linear",
         loop: true,
       });
     });
@@ -117,44 +92,54 @@ function Landing(props) {
     return () => scope.current.revert();
   }, []);
 
-// Framer Motion Scroll Handling
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 25,
-    stiffness: 100,
-  });
+  // // Framer Motion Scroll Handling
+  // const { scrollY } = useScroll();
+  // const scrollVelocity = useVelocity(scrollY);
+  // const smoothVelocity = useSpring(scrollVelocity, {
+  //   damping: 25,
+  //   stiffness: 100,
+  // });
 
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-    clamp: false,
-  });
+  // const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
+  //   clamp: false,
+  // });
 
-  useAnimationFrame((t, delta) => {
-    if (velocityFactor.get() !== 0) {
-         utils.sync(() => {
-          engine.speed = 1 + Math.abs(velocityFactor.get());
-        });
-    }
-  });
+  // const handleUpdate = () => {
+  //   if (velocityFactor.get() !== 0) {
+  //     utils.sync(() => {
+  //       engine.speed = 1 + Math.abs(velocityFactor.get());
+  //     });
+  //   }
+  // };
+
+  // const updateTimer = createTimer({
+  //   duration: 1000 / pollingRate,
+  //   loop: true,
+  //   onLoop: handleUpdate,
+  // });
 
   return (
     <div className="landing-page" ref={root}>
       <ScrollManager setScrollDelta={setScrollDelta} />
       <div className="pane1">
-        <img className="human1" src={`.${import.meta.env.VITE_PATH_PREFIX}/img/human.png`} alt="everyday human" />
+        <img
+          className="human1"
+          src={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/human.png`}
+          alt="everyday human"
+        />
         <img
           className="menacing1"
-          src={`.${import.meta.env.VITE_PATH_PREFIX}/img/menacing.png`}
+          src={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/menacing.png`}
           alt="menacing kanji"
         ></img>
         <img
           className="menacing2"
-          src={`.${import.meta.env.VITE_PATH_PREFIX}/img/menacing.png`}
+          src={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/menacing.png`}
           alt="menacing kanji"
         ></img>
         <img
           className="menacing3"
-          src={`.${import.meta.env.VITE_PATH_PREFIX}/img/menacing.png`}
+          src={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/menacing.png`}
           alt="menacing kanji"
         ></img>
         <div className="text">
@@ -172,25 +157,29 @@ function Landing(props) {
           <div className="rift">
             <img
               className="vortex-circle"
-              src={`.${import.meta.env.VITE_PATH_PREFIX}/img/vortex-circle.svg`}
+              src={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/vortex-circle.svg`}
               alt="vortex circle background"
             ></img>
             <img
               className="vortex-star"
-              src={`.${import.meta.env.VITE_PATH_PREFIX}/img/Vortex-Star.svg`}
+              src={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/Vortex-Star.svg`}
               alt="vortex star background"
             ></img>
             <img
               className="spiral-fire"
-              src={`.${import.meta.env.VITE_PATH_PREFIX}/img/spiral-fire.svg`}
+              src={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/spiral-fire.svg`}
               alt="vortex fire background"
             ></img>
             <img
               className="microphone"
-              src={`.${import.meta.env.VITE_PATH_PREFIX}/img/microphone.svg`}
+              src={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/microphone.svg`}
               alt="podcast microphone"
             ></img>
-            <img className="crow" src={`.${import.meta.env.VITE_PATH_PREFIX}/img/crow.svg`} alt="crow"></img>
+            <img
+              className="crow"
+              src={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/crow.svg`}
+              alt="crow"
+            ></img>
           </div>
           <h2>
             The perfect reason to watch through JoJo's Bizarre Adventure for the
@@ -242,7 +231,7 @@ function Landing(props) {
                 link="https://podcasts.apple.com/us/podcast/parker-brendon-and-jojo/id1596781845"
               ></SocialLink>
               <SocialLink
-                img={`.${import.meta.env.VITE_PATH_PREFIX}/img/rss.png`}
+                img={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/rss.png`}
                 rss="true"
                 link="https://anchor.fm/s/145be03c/podcast/rss"
                 label="Copy RSS Feed"
@@ -255,7 +244,7 @@ function Landing(props) {
                 link="https://open.spotify.com/show/1S5SYWaZfj41svKhQhXFzt"
               ></SocialLink>
               <SocialLink
-                img={`.${import.meta.env.VITE_PATH_PREFIX}/img/x_logo.svg`}
+                img={`.${import.meta.env.VITE_PATH_PREFIX ?? ""}/img/x_logo.svg`}
                 label="X"
                 link="https://twitter.com/PBAndJJPod"
               ></SocialLink>

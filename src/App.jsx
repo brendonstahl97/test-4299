@@ -17,7 +17,7 @@ function App() {
       <Sidebar></Sidebar>
       <main className="content">
         <Routes>
-          <Route path={`${import.meta.env.VITE_PATH_PREFIX}/`} element={<Landing />} />
+          <Route path={`${import.meta.env.VITE_PATH_PREFIX ?? ""}/`} element={<Landing />} />
           <Route path="/ranked-lists" element={<EpisodeRankings />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />
