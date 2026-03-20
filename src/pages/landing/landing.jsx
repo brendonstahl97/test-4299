@@ -242,7 +242,7 @@ function Landing(props) {
                 link="https://podcasts.apple.com/us/podcast/parker-brendon-and-jojo/id1596781845"
               ></SocialLink>
               <SocialLink
-                img="./img/rss.png"
+                img={`.${import.meta.env.VITE_PATH_PREFIX}/img/rss.png`}
                 rss="true"
                 link="https://anchor.fm/s/145be03c/podcast/rss"
                 label="Copy RSS Feed"
@@ -255,7 +255,7 @@ function Landing(props) {
                 link="https://open.spotify.com/show/1S5SYWaZfj41svKhQhXFzt"
               ></SocialLink>
               <SocialLink
-                img="./img/x_logo.svg"
+                img={`.${import.meta.env.VITE_PATH_PREFIX}/img/x_logo.svg`}
                 label="X"
                 link="https://twitter.com/PBAndJJPod"
               ></SocialLink>

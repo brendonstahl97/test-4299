@@ -14,7 +14,7 @@ function Sidebar(props) {
     return (
         <section className='sidebar'>
             <nav className={open ? 'mobile-open' : ''}>
-                <Link className='logo navLink' to='/' onClick={() => !open ? '' : setOpen(!open)}>PB&JJ</Link>
+                <Link className='logo navLink' to={`${import.meta.env.VITE_PATH_PREFIX}/`} onClick={() => !open ? '' : setOpen(!open)}>PB&JJ</Link>
                 <ul>
                     <li>
                         <Link className='navLink' to='/about' onClick={() => !open ? '' : setOpen(!open)}>About Us</Link>
