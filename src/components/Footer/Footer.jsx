@@ -6,7 +6,7 @@ function Footer(props) {
         <div className='Footer'>
             <p>Copyright © Brendon Stahl 2026</p>
             <a href='https://twitter.com/PBAndJJPod' target='_blank' rel="noreferrer">
-                <img src='./img/x_logo.svg' alt='X Icon'></img>
+                <img src={`.${import.meta.env.VITE_PATH_PREFIX}/img/x_logo.svg`}alt='X Icon'></img>
             </a>
             <a href="mailto:pbandjj.contact@gmail.com">pbandjj.contact@gmail.com</a>
         </div>

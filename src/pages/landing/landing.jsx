@@ -141,20 +141,20 @@ function Landing(props) {
     <div className="landing-page" ref={root}>
       <ScrollManager setScrollDelta={setScrollDelta} />
       <div className="pane1">
-        <img className="human1" src="./img/human.png" alt="everyday human" />
+        <img className="human1" src={`.${import.meta.env.VITE_PATH_PREFIX}/img/human.png`} alt="everyday human" />
         <img
           className="menacing1"
-          src="./img/menacing.png"
+          src={`.${import.meta.env.VITE_PATH_PREFIX}/img/menacing.png`}
           alt="menacing kanji"
         ></img>
         <img
           className="menacing2"
-          src="./img/menacing.png"
+          src={`.${import.meta.env.VITE_PATH_PREFIX}/img/menacing.png`}
           alt="menacing kanji"
         ></img>
         <img
           className="menacing3"
-          src="./img/menacing.png"
+          src={`.${import.meta.env.VITE_PATH_PREFIX}/img/menacing.png`}
           alt="menacing kanji"
         ></img>
         <div className="text">
@@ -172,25 +172,25 @@ function Landing(props) {
           <div className="rift">
             <img
               className="vortex-circle"
-              src="./img/vortex-circle.svg"
+              src={`.${import.meta.env.VITE_PATH_PREFIX}/img/vortex-circle.svg`}
               alt="vortex circle background"
             ></img>
             <img
               className="vortex-star"
-              src="./img/Vortex-Star.svg"
+              src={`.${import.meta.env.VITE_PATH_PREFIX}/img/Vortex-Star.svg`}
               alt="vortex star background"
             ></img>
             <img
               className="spiral-fire"
-              src="./img/spiral-fire.svg"
+              src={`.${import.meta.env.VITE_PATH_PREFIX}/img/spiral-fire.svg`}
               alt="vortex fire background"
             ></img>
             <img
               className="microphone"
-              src="./img/microphone.svg"
+              src={`.${import.meta.env.VITE_PATH_PREFIX}/img/microphone.svg`}
               alt="podcast microphone"
             ></img>
-            <img className="crow" src="./img/crow.svg" alt="crow"></img>
+            <img className="crow" src={`.${import.meta.env.VITE_PATH_PREFIX}/img/crow.svg`} alt="crow"></img>
           </div>
           <h2>
             The perfect reason to watch through JoJo's Bizarre Adventure for the
